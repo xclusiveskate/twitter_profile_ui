@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_profile_ui/pages/likes.dart';
 import 'package:twitter_profile_ui/pages/media.dart';
+import 'package:twitter_profile_ui/pages/tweets.dart';
+import 'package:twitter_profile_ui/pages/tweets_replies.dart';
 
 class BodyTabPage extends StatefulWidget {
   const BodyTabPage({super.key});
@@ -49,10 +51,10 @@ class _BodyTabPageState extends State<BodyTabPage>
             height: MediaQuery.of(context).size.height,
             child: TabBarView(controller: tabC, children: const [
               Tab(
-                child: Text("tweet"),
+                child: Tweets(),
               ),
               Tab(
-                child: Text("tweet & replies"),
+                child: TweetsRep(),
               ),
               Tab(
                 child: MediaPage(),
